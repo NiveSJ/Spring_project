@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
     private FortuneService dailyFortune;
 
-    @Autowired
+    @Autowired  // Not necessary if the class has only one constructor
     public TennisCoach(FortuneService dailyFortune) {
         this.dailyFortune = dailyFortune;
 
