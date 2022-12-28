@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
+    @Autowired  // field Injection
     private FortuneService dailyFortune;
   /*  //Constructor Injection
     @Autowired  // Not necessary if the class has only one constructor
@@ -15,14 +16,21 @@ public class TennisCoach implements Coach {
     }*/
 
     // setter Injection
-    public TennisCoach(){
+    public TennisCoach() {
         System.out.println(">> Tennis coach: Inside default constructor");
     }
-    @Autowired
-    public void setDailyFortune(FortuneService dailyFortune) {
-        System.out.println(">> Tennis coach: Inside setDailyFortune()");
+
+    /* @Autowired
+     public void setDailyFortune(FortuneService dailyFortune) {
+         System.out.println(">> Tennis coach: Inside setDailyFortune()");
+         this.dailyFortune = dailyFortune;
+     }*/
+    /*@Autowired  // Method Injection
+    public void doAutoWire(FortuneService dailyFortune) {
+        System.out.println(">> Tennis coach: Inside doAutoWired()");
         this.dailyFortune = dailyFortune;
-    }
+    }*/
+
 
     public String getDailyWorkout() {
         return " >> Practise fore hand and back hand daily ";
