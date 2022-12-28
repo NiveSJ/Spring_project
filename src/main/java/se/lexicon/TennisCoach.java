@@ -1,11 +1,14 @@
 package se.lexicon;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class TennisCoach implements Coach {
     @Autowired  // field Injection
+    @Qualifier("databaseFortuneService")
     private FortuneService dailyFortune;
   /*  //Constructor Injection
     @Autowired  // Not necessary if the class has only one constructor
