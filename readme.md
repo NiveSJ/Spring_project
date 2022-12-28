@@ -1,1 +1,1 @@
-Learning Spring Inversion of control concept.
+Learning Spring Inversion of control and Dependency Injection concept.
