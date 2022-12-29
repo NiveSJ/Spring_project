@@ -10,21 +10,16 @@ import java.util.Random;
 
 @Component
 public class DatabaseFortuneService implements FortuneService {
-    @Autowired
+   @Autowired
     private FortuneCSVReader CSVReader;
     private Random myRandom = new Random();
 
 
-    List<String> fortuneList = new ArrayList<String>();
+    List<String> fortuneList = CSVReader.fortuneReader();
 
-    public List<String> getFortuneList() {
-        return fortuneList;
-    }
 
-    public void setFortuneList(List<String> fortuneList) {
-        this.fortuneList = CSVReader.fortuneReader();
 
-    }
+
 
 
     public String getFortune() {
