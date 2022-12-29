@@ -24,9 +24,8 @@ public class DatabaseFortuneService implements FortuneService {
 
     public String getFortune() {
         System.out.println(">> Inside database fortune service!!");
-        System.out.println("Fortune List" + fortuneList);
-        System.out.println(myRandom.nextInt(3));
-        String fortune = fortuneList.get(1);
+
+        String fortune = fortuneList.get(myRandom.nextInt(fortuneList.size()));
 
         return fortune;
     }
