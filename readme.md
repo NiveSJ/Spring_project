@@ -6,3 +6,5 @@
 
 @Qualifier to specify unique bean id 
 @Scope to specify the scope of object.(By default scope is Singleton)
+@PostConstruct like init
+@PreDestroy like destructor
